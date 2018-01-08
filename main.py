@@ -7,7 +7,7 @@ form = """
 <!DOCTYPE HTML>
 <html>
     <body>
-        <form action="/" Method=['POST']>
+        <form action="/" Method='POST'>
             
             <p><label for=username>Enter Username:</label>
             <input id="username" type=text name="username:"></p>
@@ -33,7 +33,7 @@ form = """
 def input_rules():
     return form
 
-@app.route("/WelcomePage", methods=['POST', 'GET'])
+@app.route("/WelcomePage", methods=['POST'])
 def welcome():
     username = request.form['username']
     return '<h1>Welcome, ' + username + '</h1>'
