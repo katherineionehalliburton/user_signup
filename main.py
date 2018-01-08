@@ -9,8 +9,8 @@ form = """
     <body>
         <form action="/" Method='POST'>
             
-            <p><label for=username>Enter Username:</label>
-            <input id="username" type=text name="username:"></p>
+            <p><label for=username>Enter username:</label>
+            <input id="username" type=text name="username"></p>
 
             <p><label for=password>Please enter password:</label>
             <input id="password" type=password name="password"></p>
@@ -30,11 +30,12 @@ form = """
 </html>
 """
 @app.route("/")
-def input_rules():
+def user_signup():
     return form
 
 @app.route("/WelcomePage", methods=['POST'])
 def welcome():
     username = request.form['username']
-    return '<h1>Welcome, ' + username + '</h1>'
+    return '<h1>Welcome, ' + username + '!</h1>'
+
 app.run()
