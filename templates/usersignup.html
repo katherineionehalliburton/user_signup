@@ -1,19 +1,32 @@
 <!DOCTYPE HTML>
 <html>
+    <head> 
+        <style>
+            .error {color: red;}
+        </style>
+    </head>
     <body>
-        <form action="/" Method='POST'>
+        <form action="/" method='POST'>
             
             <p><label for=username>Enter username:</label>
-            <input id="username" type=text name="username"></p>
+            <input id="username" type=text name="username" value='{{username}}'></p>
+            <p class="error">{{Username_error}}</p>
+
+
 
             <p><label for=password>Please enter password:</label>
-            <input id="password" type=password name="password"></p>
+            <input id="password" type=password name="password" value='{{password}}'></p>
+            <p class="error">{{Password_error}}</p>
+
 
             <p><label for=confirm_pass>Confirm Password:</label>
-            <input id="confirm_pass" type=password name="confirm_pass"></p>
+            <input id="confirm_pass" type=password name="confirm_pass" value='{{confirm_pass}}'></p>
+            <p class="error">{{Confirm_pass_error}}</p>
+
 
             <label for=email>Email:</label>
-            <input id="email" type=text name="email">            
+            <input id="email" type=text name="email" value='{{email}}'>         
+            <p class="error">{{Email_error}}</p>
             <label for=checkbox>Select to receive email updates</label>
             <input id="checkbox" type=checkbox name="checkbox"> 
 
