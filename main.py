@@ -32,8 +32,10 @@ def validate_form():
     if len(confirm_pass) < 3 or len(confirm_pass) > 20 or " " in confirm_pass or confirm_pass == "":
         Confirm_pass_error = "Your entry must be between 3 and 20 characters and contain no spaces. Required field."
         
-    if "." not in email or "@" not in email or " " in email:
-        Email_error = "Please check and re-submit. Please do not use spaces."
+    if "" in email:
+        continue
+    if "" not in email and "." not in email and "@" not in email and " " in email:
+            Email_error = "Please check and re-submit. Please do not use spaces."
 
     if password != confirm_pass:
         Password_error = "Password and Confirm Password fields must match."
